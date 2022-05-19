@@ -1,0 +1,8 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{OoH}{5}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{OoH for Intel SPP}{12}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{OoH for Intel PML}{26}{0}{3}
