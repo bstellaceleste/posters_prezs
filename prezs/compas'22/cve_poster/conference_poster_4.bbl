@@ -1,0 +1,12 @@
+\begin{thebibliography}{1}
+
+\bibitem{dowser}
+Istvan Haller and al.
+\newblock Dowser: A guided fuzzer for finding buffer overflow vulnerabilities.
+\newblock {\em Usenix Security}, 2013.
+
+\bibitem{top25}
+Cwe/sans top 25 most dangerous software errors.
+\newblock https://www.sans.org/top25-software-errors, 2022.
+
+\end{thebibliography}

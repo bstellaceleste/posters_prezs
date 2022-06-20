@@ -1,0 +1,22 @@
+\begin{thebibliography}{1}
+
+\bibitem{top25}
+Cwe/sans top 25 most dangerous software errors.
+\newblock https://www.sans.org/top25-software-errors, 2022.
+
+\bibitem{slimguard}
+Beichen~Liu et~al.
+\newblock Slimguard: A secure and memory-efficient heap allocator.
+\newblock {\em Middleware}, 2019.
+
+\bibitem{guarder}
+Sam Silvestro, Hongyu Liu, Tianyi Liu, Zhiqiang Lin, and Tongping Liu.
+\newblock Guarder: A tunable secure allocator.
+\newblock In {\em 27th USENIX Security Symposium (USENIX Security 18)}, pages
+  117--133, Baltimore, MD, August 2018. USENIX Association.
+
+\bibitem{spp}
+Intel ept-based sub-page write protection support.
+\newblock \url{https://lwn.net/Articles/736322/}, October 2017.
+
+\end{thebibliography}
