@@ -46,3 +46,6 @@ Processing data closer to storage: PIM (Process In Memory): https://www.upmem.co
 * rationales: raisons, motifs [we present rationales behind our design - rationales for/of/about]
 * tailor-made: faites sur mesure
 * outlook: perspectives, visions
+* panacea: panacée
+* conundrum: énigme (dilemme/casse-tête)
+* onset: début (from the onset of ... )

@@ -1,0 +1,15 @@
+Virtualisation: à chaque ressource physique est associée une ressource virtuelle qui est une représentation partagée de la R physique
+écran - fenêtre
+entrée/sortie - flot
+processeur - processus
+disque - fichier
+mémoire - mémoire virtuelle
+
+cooperative sequential processes: papier Dijkstra
+
+pagination: en segments de taille fixe car c ainsi interchangeable
+(le segmentation fault vient de là du fait que la mémoire est divisée en segments et qu'il  y a un pb dans un segment donné)
+
+la prochaine fois pour expliquer la virtualisation à des élèves: prendre l'exemple du téléphone où on ne peut pas avoir 2 comptes whatsapp (pr ceci il faut 2 téléphones diff, si on installe un tel virtuel ds leur iphone alors ils peuvent avoir autant de whatsapp que de tel virtuels)
+
+Principes des systèmes d'exploitation des ordinateurs Sacha Krakoviak

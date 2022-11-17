@@ -1,0 +1,16 @@
+4.89  1      regular_function  //just a value return
+6.05  1      getpid   //glibc caches this one (forks invalidate the cached value)
+17.7  4      sysconf(_SC_PAGESIZE)
+22.6  5      getauxval(AT_EUID)
+25.4  5      sysconf(_SC_NPROCESSORS_ONLN)
+27.1  6      getauxval(AT_UID)
+54.1  11     gettimeofday
+235   48     geteuid
+261   53     getuid
+264   54     getppid
+314   64     sysconf(_SC_OPEN_MAX)
+622   127    pread@0 // IO funcs benchmarked with 1 bytes quantities
+638   130    read    // through a 1 Gigabyte file
+1690  346    write
+1710  350    pwrite@0
+

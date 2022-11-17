@@ -91,7 +91,7 @@ linewidth=2pt % Width of the border lines around content boxes
 {\includegraphics[height=5em]{irit.png}} % First university/lab logo on the left
 %
 {\bf\LARGE\ \textsc{Guarnary}: Mitigating Buffer Overflow Using Hardware Assisted Virtualization Features} % Poster title \vspace{0.2em}
-{\textsl{\small Stella Bitchebe$^{+,o}$, Yves KONE$^{+,*}$, $^{+}$Alain Tchana, $^{+}$Labo LIP - Ecole Normale Sup\'erieure de Lyon, $^{o}$Labo I3S - Université Côte d'Azur, $^{*}$Labo IRIT - INP Toulouse}\\ \vspace{0.2em}
+{\textsl{\small Stella Bitchebe$^{+,o}$, Yves KONE$^{+,*}$, Alain Tchana$^{+}$, $^{+}$Labo LIP - Ecole Normale Sup\'erieure de Lyon, $^{o}$Labo I3S - Université Côte d'Azur, $^{*}$Labo IRIT - INP Toulouse}\\ \vspace{0.2em}
 \includegraphics[height=2em]{I3S.png}
 \hspace*{6em}
 \includegraphics[width=0.15\linewidth]{compas.png}
@@ -176,13 +176,13 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{4. Guarnary Challenges}{name=guarnary,column=2,span=2,row=0,below=dilem,above=references}
 {
-    Guarnary is midway between canaries and guard pages, which gives it the advantages of both guardians: low memory consumption and synchronous detection.
+    Guarnary is a novel type of guardian that uses Intel sub-pages as barriers. It is midway between canaries and guard pages, which gives it the advantages of both guardians: low memory consumption and synchronous detection. Its use raises the following challenges:
     \begin{multicols}{2}
         \textcolor{blue}{\textbf{($C_1$) One size does not fit all:}} 
         \begin{center}
-            \includegraphics[width=\columnwidth]{figures/challenge1}
+            \includegraphics[width=.85\columnwidth]{figures/challenge1}
             Guarnary must satify the following equation: $\sum GN + \sum RGN < \sum RGP$
-            \captionof{figure}{Challenge $C_1$ illustration. GN stands for Guarnary, 
+            \captionof{figure}{Challenge $C_1$ illustration. GSP stands for guarg sub-page, 
             $\sum GN$ memory consumed by guarnary, $\sum RGN$ and $\sum RGP$ internal fragmentation waste resp. of guarnary and guard page.}            
         \end{center}
 

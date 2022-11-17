@@ -1,15 +1,16 @@
 # Fdb version 3
-["bibtex conference_poster_4"] 1655741350 "conference_poster_4.aux" "conference_poster_4.bbl" "conference_poster_4" 1655741350
+["bibtex conference_poster_4"] 1655749554 "conference_poster_4.aux" "conference_poster_4.bbl" "conference_poster_4" 1655750048
   "/usr/share/texlive/texmf-dist/bibtex/bst/base/unsrt.bst" 1480098433 18030 1376b4b231b50c66211e47e42eda2875 ""
-  "conference_poster_4.aux" 1655741350 1428 03ace985aebe49bb90762c8fc8193b54 ""
+  "conference_poster_4.aux" 1655750048 1515 07e21518f5c97027f0a7d1186307dfd9 ""
   "conference_poster_4.bcf" 0 -1 0 ""
-  "sample.bib" 1655737952 955 5a7a5e6eda2d21119708c6d6b4e59d89 ""
+  "sample.bib" 1655743342 953 700ed34e9b8dce2b12f4f7ad779c841a ""
   (generated)
   "conference_poster_4.bbl"
-["pdflatex"] 1655741351 "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.tex" "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.pdf" "conference_poster_4" 1655741351
+  "conference_poster_4.blg"
+["pdflatex"] 1655750047 "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.tex" "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.pdf" "conference_poster_4" 1655750048
   "/etc/texmf/web2c/texmf.cnf" 1585236831 475 c0e671620eb5563b2130f56340a5fde8 ""
-  "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.aux" 1655741350 1428 03ace985aebe49bb90762c8fc8193b54 ""
-  "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.tex" 1655741347 12930 af089eb709f96240d9499abd67758dce ""
+  "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.aux" 1655750048 1515 07e21518f5c97027f0a7d1186307dfd9 ""
+  "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.tex" 1655750046 13051 8117bf159dae01676e8eb4ac71bb2593 ""
   "/usr/share/texlive/texmf-dist/fonts/enc/dvips/base/8r.enc" 1480098666 4850 80dc9bab7f31fb78a000ccfed0e27cab ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1511824771 3332 103109f5612ad95229751940c61aada0 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/adobe/courier/pcrr8r.tfm" 1480098688 1292 bd42be2f344128bff6d35d98474adfe3 ""
@@ -223,12 +224,12 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1588334466 2700761 ac0584cc9514ab21918550a6948c4ee2 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1588334492 4129564 fdee2962ffcdea251203e88954951ead ""
   "baposter.cls" 1654166586 48744 be689fb62b90a56c8b0d0c008559b7ff ""
-  "conference_poster_4.aux" 1655741350 1428 03ace985aebe49bb90762c8fc8193b54 ""
-  "conference_poster_4.bbl" 1655741351 721 72819485c075dc325f26b889841ff633 "bibtex conference_poster_4"
-  "conference_poster_4.tex" 1655741347 12930 af089eb709f96240d9499abd67758dce ""
+  "conference_poster_4.aux" 1655750048 1515 07e21518f5c97027f0a7d1186307dfd9 ""
+  "conference_poster_4.bbl" 1655749554 711 26ec467286b5f91c107ceecfe3d3be9a "bibtex conference_poster_4"
+  "conference_poster_4.tex" 1655750046 13051 8117bf159dae01676e8eb4ac71bb2593 ""
   "figures/I3S.png" 1655738922 420919 bf4b8661fa597c17e4ee70795f10025a ""
   "figures/blackscholes.pdf" 1655478304 14720 9209e46bfab8854e4dbc71982e2820a5 ""
-  "figures/challenge1.pdf" 1655737511 50997 ab84d2df571a9d3b4c6cfbb68294700a ""
+  "figures/challenge1.pdf" 1655749435 51208 d680ad1e50ac32518cdb6410f6a8638a ""
   "figures/compas.png" 1655739201 16004 36f6c097dda654fb9d12928b9fe4167f ""
   "figures/enslogo.png" 1655214973 2191 f92fc0f3b04d0cd2371859e0269733de ""
   "figures/irit.png" 1654166586 6725 bc001ddfa9916a72b91cc7cb6ce48283 ""
@@ -237,8 +238,8 @@
   "figures/spp_walk.pdf" 1655484312 71071 ac19507ea8202eff2da679670e5ce2b4 ""
   "figures/waste1.pdf" 1655478110 11206 c8ba4446bd836568e4fcb47a92a42199 ""
   (generated)
-  "conference_poster_4.log"
   "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.log"
-  "conference_poster_4.aux"
   "conference_poster_4.pdf"
+  "conference_poster_4.log"
+  "conference_poster_4.aux"
   "/home/ens/Documents/papers_posters_prez/prezs/compas'22/spp_poster/conference_poster_4.pdf"
