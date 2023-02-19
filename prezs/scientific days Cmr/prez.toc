@@ -1,0 +1,42 @@
+\boolfalse {citerequest}\boolfalse {citetracker}\boolfalse {pagetracker}\boolfalse {backtracker}\relax 
+\babel@toc {english}{}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {1}{Context: Buffer Overflow in Virtualized Clouds}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{1}{Importance of Buffer Overflow}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {1}{2}{Virtualized Clouds}{2}{0}{1}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {2}{State-of-the-art Techniques}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{1}{Canary}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{2}{Guard Page}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {2}{3}{Hardware Capabilities}{6}{0}{2}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {3}{Secure Allocators: SlimGuard}{9}{0}{3}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {4}{Problem: Dilemma between Synchronous Detection vs Memory Overhead}{16}{0}{4}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {5}{GuaNary: Canary and Guard Page Countermeasure}{18}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {5}{1}{Intel Sub-Page write Permission (SPP)}{18}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {5}{2}{Challenges}{18}{0}{5}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {6}{LeanGuard: GuaNary-based Secure Allocator}{24}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {6}{1}{Overview}{24}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {6}{2}{Implementation}{24}{0}{6}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {7}{Evaluatons}{30}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {7}{1}{Benchmarks}{30}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {7}{2}{Memory Consumption}{30}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@subsectionintoc {7}{3}{Performance Overhead}{30}{0}{7}
+\defcounter {refsection}{0}\relax 
+\beamer@sectionintoc {8}{Conclusion}{34}{0}{8}

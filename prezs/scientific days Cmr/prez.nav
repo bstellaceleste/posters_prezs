@@ -1,0 +1,169 @@
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {0}{0}{1}{1/1}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {1}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {1}{Context: Buffer Overflow in Virtualized Clouds}{2}{Context: Buffer Overflow in Virtualized Clouds}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {2}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{1}{2}{Importance of Buffer Overflow}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {2}{1}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{1}{2}{2}{Virtualized Clouds}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{1}{2/3}{Virtualized Clouds}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {2}{3}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {1}{2}{2}{4/5}{Virtualized Clouds}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {4}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {2}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {2}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {2}{State-of-the-art Techniques}{6}{State-of-the-art Techniques}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {6}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{1}{6}{Canary}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {6}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{2}{6}{Guard Page}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {6}{5}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{2}{3}{6}{Hardware Capabilities}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {2}{3}{1}{6/8}{Hardware Capabilities}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {6}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {6}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {6}{8}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {3}{Secure Allocators: SlimGuard}{9}{Secure Allocators: SlimGuard}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{1}{9/11}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {9}{11}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{2}{12/13}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {12}{13}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {3}{0}{3}{14/15}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {14}{15}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {9}{15}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {9}{15}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {4}{Problem: Dilemma between Synchronous Detection vs Memory Overhead}{16}{Problem: Dilemma between Synchronous Detection vs Memory Overhead}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {4}{0}{1}{16/17}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {16}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {16}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {16}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {5}{GuaNary: Canary and Guard Page Countermeasure}{18}{GuaNary: Canary and Guard Page Countermeasure}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {18}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{5}{1}{18}{Intel Sub-Page write Permission (SPP)}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {18}{17}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{5}{2}{18}{Challenges}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{1}{18/18}{Challenges}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {18}{18}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {5}{2}{2}{19/23}{Challenges}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {19}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {18}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {18}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {6}{LeanGuard: GuaNary-based Secure Allocator}{24}{LeanGuard: GuaNary-based Secure Allocator}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {24}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{6}{1}{24}{Overview}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {24}{23}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{6}{2}{24}{Implementation}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{2}{1}{24/26}{Implementation}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {24}{26}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {6}{2}{2}{27/29}{Implementation}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {27}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {24}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {24}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {7}{Evaluatons}{30}{Evaluatons}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {30}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{7}{1}{30}{Benchmarks}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {30}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{7}{2}{30}{Memory Consumption}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {30}{29}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionentry {0}{7}{3}{30}{Performance Overhead}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {7}{3}{1}{30/30}{Performance Overhead}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {30}{30}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {7}{3}{2}{31/31}{Performance Overhead}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {31}{31}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {7}{3}{3}{32/32}{Performance Overhead}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {32}{32}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {7}{3}{4}{33/33}{Performance Overhead}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {33}{33}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@sectionpages {30}{33}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@subsectionpages {30}{33}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\sectionentry {8}{Conclusion}{34}{Conclusion}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\slideentry {8}{0}{1}{34/34}{}{0}}
+\defcounter {refsection}{0}\relax 
+\headcommand {\beamer@framepages {34}{34}}
+\headcommand {\beamer@partpages {1}{34}}
+\headcommand {\beamer@subsectionpages {34}{34}}
+\headcommand {\beamer@sectionpages {34}{34}}
+\headcommand {\beamer@documentpages {34}}
+\headcommand {\gdef \inserttotalframenumber {17}}

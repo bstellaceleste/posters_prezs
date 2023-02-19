@@ -1,0 +1,11 @@
+- il faut rajouter dès le début la pertinence pour le tracker et pas seulement au moment des résultats d'éval
+- qui cherche t on à améliorer le tracker ou l'application trackée: il faut le faire ressortir dès le début
+- dans la prez au niveau de EPML il faut mieux détailler et expliquer le pourquoi des modifs HW
+- dans l'éval il faut appuyer sur le fait qu'en Système mm gagner 1ns ou 1s c'erst important (surtout dans le contexte actuel du cloud et du faas où paie à la seconde)
+- insister sur le fait que les modifs matérielless sont vrmt légères (on n'ajoute pas de régistres, etc.)
+- dans la prez mettre côte à côte les résultats pour l'appli et ceux sur le tracker pour ne pas embrouiller l'audimat sur la compréhension des résultats
+- rajouter la section secu et celle scalabilité
+- pas besoin de rajouter le background sur vt-x juste au moment où je parle de PML je peux le dire à l'oral pour expliquer les modifs dans le vmcs avec EPML
+- rajouter contexte où on parle de la virtualisation et du HPC (voir l'intro)
+
+REAP Aslplos 2021 --> state of the art
