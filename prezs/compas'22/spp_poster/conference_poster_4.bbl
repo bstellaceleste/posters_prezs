@@ -10,7 +10,7 @@ Beichen~Liu et~al.
 \newblock {\em Middleware}, 2019.
 
 \bibitem{guarder}
-Sam Silvestro, Hongyu Liu, Tianyi Liu, Zhiqiang Lin, and Tongping Liu.
+Sam~Silvestro et~al.
 \newblock Guarder: A tunable secure allocator.
 \newblock In {\em 27th USENIX Security Symposium (USENIX Security 18)}, pages
   117--133, Baltimore, MD, August 2018. USENIX Association.
@@ -18,5 +18,10 @@ Sam Silvestro, Hongyu Liu, Tianyi Liu, Zhiqiang Lin, and Tongping Liu.
 \bibitem{spp}
 Intel ept-based sub-page write protection support.
 \newblock https://lwn.net/Articles/736322/, Oct 2017.
+
+\bibitem{ept}
+Intel.
+\newblock volume~3C.
+\newblock 2022.
 
 \end{thebibliography}

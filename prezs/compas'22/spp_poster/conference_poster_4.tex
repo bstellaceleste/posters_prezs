@@ -48,7 +48,7 @@
 \selectcolormodel{cmyk}
 
 \usepackage{tikz} % Required for flow chart
-\usetikzlibrary{shapes,arrows} % Tikz libraries required for the flow chart in the template
+\usetikzlibrary{shapes,arrows} % Tikz libraries required forand Hongyu Liu and Tianyi Liu and Zhiqiang Lin and Tongping Liu the flow chart in the template
 
 \newcommand{\compresslist}{ % Define a command to reduce spacing within itemize/enumerate environments, this is used right after \begin{itemize} or \begin{enumerate}
 \setlength{\itemsep}{1pt}
@@ -88,17 +88,24 @@ linewidth=2pt % Width of the border lines around content boxes
 %	TITLE SECTION 
 %----------------------------------------------------------------------------------------
 %
-{\includegraphics[height=5em]{irit.png}} % First university/lab logo on the left
+{
+    \includegraphics[height=3em]{figures/logo_grenoble}    
+} % First university/lab logo on the left
 %
-{\bf\LARGE\ \textsc{Guarnary}: Mitigating Buffer Overflow Using Hardware Assisted Virtualization Features} % Poster title \vspace{0.2em}
-{\textsl{\small Stella Bitchebe$^{+,o}$, Yves KONE$^{+,*}$, Alain Tchana$^{+}$, $^{+}$Labo LIP - Ecole Normale Sup\'erieure de Lyon, $^{o}$Labo I3S - Université Côte d'Azur, $^{*}$Labo IRIT - INP Toulouse}\\ \vspace{0.2em}
-\includegraphics[height=2em]{I3S.png}
-\hspace*{6em}
-\includegraphics[width=0.15\linewidth]{compas.png}
-\hspace*{6.3em}
-\includegraphics[scale=.2]{enslogo.png}}
-{\includegraphics[height=5em]{logo_lip_HD.png}} 
-
+{
+    \bf\large\ \textsc{GuaNary}: Efficient Buffer Overflow Detection In Virtualized Clouds Using Intel EPT-based Sub-Page Write Protection Support\vspace{0.3em}
+} % Poster title \vspace{0.2em}
+{
+    \textsl{\small Stella Bitchebe$^{1}$, Yves Kone$^{2}$, Pierre Olivier$^{3}$, Jalil Boukhobza$^{4}$, Yérom-David Bromberg$^{5}$, Daniel Hagimont$^{2}$, Alain Tchana$^{6}$\\
+    $^1$Université Côte d'Azur, $^2$University of Toulouse, $^3$University of Manchester, $^4$ENSTA Bretagne, $^5$University of Rennes, $^6$Grenoble INP}\\ 
+    \vspace{0.15em} 
+    \includegraphics[height=.9em]{figures/eurosys_23} %\vspace{0.2em}
+    \hspace*{.3mm}
+    \includegraphics[height=1.7em]{figures/I3S}
+} 
+{
+    \includegraphics[height=4em]{figures/irit2}
+}
 %----------------------------------------------------------------------------------------
 %	CTX & MOTIV
 %----------------------------------------------------------------------------------------
@@ -106,18 +113,29 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{1. Context and Motivation}{name=ctxmotiv,column=0,span=2}
 {
     \begin{itemize}
-        \item Buffer overflow is the top one vulnerability in 2021 according to the CWE (Common Weakness Enumeration)~\cite{top25}
-        \item Secure Allocators (Slimguard~\cite{slimguard}, Guarder~\cite{guarder}, etc.) use \emph{guardians} to prevent and detect overflows
-        \item Existing types of guardians: 
+        \item Buffer overflow was reported as the top vulnerability in 2022, according to the CWE (Common Weakness Enumeration)~\cite{top25}.
+        \item Secure Allocators (e.g., Slimguard~\cite{slimguard}, Guarder~\cite{guarder}, etc.) generally use \emph{safety guards} located after a buffer to prevent and detect overflows.
+        \item State-of-the-art safety guards: 
             \begin{itemize}
-                \item \textcolor{blue}{\bf Canary}: Low memory overhead + Asynchronous detection
-                \item \textcolor{blue}{\textbf{Guard Page}}: High memory overhead + Synchronous detection
+                \item \textcolor{blue}{\bf Canary}: 1-byte magic values checked to detect overflow => Modest memory overhead + Asynchronous detection (see Figure~\ref{fig:cn-gp-gn}).
+                \item \textcolor{blue}{\textbf{Guard Page}}: unmapped pages in the virtual address space that trigger a fault if the page is hit by an overflow => Significant memory overhead + Synchronous detection (see Figures~\ref{fig:cn-gp-gn} and~\ref{fig:waste-parsec-gp1}).
             \end{itemize}
     \end{itemize}
 
     \centering
-    \includegraphics[width=.4\columnwidth]{figures/waste1}
-    \captionof{figure}{Memory waste of PARSEC when all application's buffers are allocated at the boundary of a guard page using Slimguard as the memory allocator.}
+    \begin{minipage}[t]{.48\linewidth}
+        \centering 
+        \includegraphics[width=.7\columnwidth]{figures/waste1}
+        \captionof{figure}{Memory over-consumption that Slimguard would incur for PARSEC applications if all the allocated buffers are placed at the boundary of a guard page (worse case).}
+        \label{fig:waste-parsec-gp1}		
+    \end{minipage}
+    \hfill
+    \begin{minipage}[t]{.48\linewidth}
+        \centering 
+        \includegraphics[width=.9\columnwidth]{figures/cn-gp-gn}
+        \captionof{figure}{Canary, Guard pages, and GuaNary illustration. For the two latter, buffers are aligned with the lower boundary of the (sub)page.}
+        \label{fig:cn-gp-gn}		
+    \end{minipage}
 %\vspace{-4cm} % When there are two boxes, some whitespace may need to be added if the one on the right has more content
 }
 
@@ -126,32 +144,22 @@ linewidth=2pt % Width of the border lines around content boxes
 {
     \begin{multicols}{2}
         \begin{itemize}
-            \item \textcolor{blue}{Security distance}: for a vulnerable buffer \texttt{b}, it is the number of bytes that separate it from a guardian
-            \item \textcolor{blue}{Protection frequency}: \texttt{F} is called the protection frequency if a guard page is placed for every \texttt{F} allocated buffers
-            \item User configures \texttt{F} and the allocator combines guard pages with canaries to minimize the security distance while optimizing the memory consumption
+            \item \textcolor{blue}{Security distance}: for a vulnerable buffer \texttt{b}, the security distance is the number of bytes separating \texttt{b} from a safety guard. A zero security distance allows catching overflow attempts immediately. Protecting all the buffers with a zero security distance is not practical for most existing allocators, as it would result in considerable memory overhead (like in Figure~\ref{fig:waste-parsec-gp1}).
+            \item \textcolor{blue}{Protection frequency}: \texttt{F} is called the protection frequency if a safety guard is placed after every \texttt{F}-allocated buffers. 
+            \item Memory overhead is a real conundrum for users who sacrifice security for better
+            memory utilization or vice versa. To this end, they can configure \texttt{F} for better memory consumption and security trade-off (See Figure~\ref{fig:waste-parsec-gpn}).
         \end{itemize}
 
-        \vspace{0.2cm}
+        \vspace{-0.4cm}
 
         \centering
-        \includegraphics[width=.65\columnwidth]{figures/blackscholes}
-        \captionof{figure}{Memory waste and average security distances of PARSEC-\texttt{blackscholes} when varying the protection frequency.}
-        \vspace*{5mm}
-        \begin{minipage}{\columnwidth}
-            \centering
-            \resizebox{\columnwidth}{!}
-            {%
-            \begin{tabular}{l l l l l l l l l l l }
-                \toprule\hline
-                Frequency & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
-                \midrule
-                Buffers protected(\%) & 100 & 50 & 33.33 & 25	& 20 &	16.67 &	14.28 & 12.5 & 11.11 & 10 \\
-                \hline\bottomrule
-            \end{tabular}
-            }
-            \captionof{table}{Proportion of PARSEC-\texttt{blackscholes}'s buffers placed at the boundary of a guard page for different values of the protection frequency. The allocator is Slimgard.}
+        \begin{minipage}[t]{\columnwidth}
+            \centering 
+            \includegraphics[width=.8\columnwidth]{figures/blackscholes}
+            \captionof{figure}{Memory overhead and average security distances for PARSEC-\texttt{blackscholes} when varying the protection frequency from 2 to 50. The intersection between the two curves gives the optimal frequency, i.e., the one providing the best memory overhead and security trade-off. The allocator is Slimguard.}
+            \label{fig:waste-parsec-gpn}		
         \end{minipage}
-                
+
     \end{multicols}
 }
 
@@ -162,43 +170,46 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{References}{name=references,column=0,above=bottom,span=3,boxColorOne=white}
 {
-\renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
-\nocite{*} % Insert publications even if they are not cited in the poster
-\small{ % Reduce the font size in this block
-\bibliographystyle{unsrt}
-\bibliography{sample} % Use sample.bib as the bibliography file
-}
+    \begin{multicols}{2}
+        \renewcommand{\section}[2]{\vskip 0.05em} % Get rid of the default "References" section title
+        \nocite{*} % Insert publications even if they are not cited in the poster
+        \scriptsize{ % Reduce the font size in this block
+        \bibliographystyle{unsrt}
+        \bibliography{sample} % Use sample.bib as the bibliography file
+        }
+    \end{multicols}
 }
 
 %----------------------------------------------------------------------------------------
 %	RESULTS 
 %----------------------------------------------------------------------------------------
 
-\headerbox{4. Guarnary Challenges}{name=guarnary,column=2,span=2,row=0,below=dilem,above=references}
+\headerbox{4. GuarNary and LeanGuard}{name=guarnary,column=2,span=2,row=0,below=dilem,above=references}
 {
-    Guarnary is a novel type of guardian that uses Intel sub-pages as barriers. It is midway between canaries and guard pages, which gives it the advantages of both guardians: low memory consumption and synchronous detection. Its use raises the following challenges:
-    \begin{multicols}{2}
-        \textcolor{blue}{\textbf{($C_1$) One size does not fit all:}} 
-        \begin{center}
-            \includegraphics[width=.85\columnwidth]{figures/challenge1}
-            Guarnary must satify the following equation: $\sum GN + \sum RGN < \sum RGP$
-            \captionof{figure}{Challenge $C_1$ illustration. GSP stands for guarg sub-page, 
-            $\sum GN$ memory consumed by guarnary, $\sum RGN$ and $\sum RGP$ internal fragmentation waste resp. of guarnary and guard page.}            
-        \end{center}
+    \begin{multicols}{2}      
 
-        \vspace*{2mm}     
+        Using SPP, we introduce \textbf{\texttt{GuarNary}}, a novel type of safety guard that is midway between \texttt{Gua}rd page and ca\texttt{Nary}, thus providing the advantages of both solutions: synchronous buffer overflow detection and modest memory consumption (see Figure~\ref{fig:cn-gp-gn}).\\
+        We also propose \textbf{\texttt{LeanGuard}} (see Figure~\ref{fig:leanguard-overview}), a software stack for \texttt{GuarNary} usage from inside virtual machines by new secure allocators.
 
-        \textcolor{blue}{\textbf{($C_2$) Costly hypercalls:}} SPP is configurable solely by the hypervisor.\\
+        Figure~\ref{fig:mem-eval} shows that for the same number of protected buffers, LeanGuard consumes 8.3$\times$ less memory than SlimGuard. Further, for the same memory consumption, LeanGuard allows protecting 25$\times$ more buffers than SlimGuard.
 
-        \textcolor{blue}{\textbf{($C_3$) Physical page heterogeneity:}} see Figure 4.\\
-
-        \textcolor{blue}{\textbf{($C_4$) Protection pattern heterogeneity:}} the protection pattern is the bitmap of sub-pages that are write-protected within an SPP page.
-        \begin{center}
-            \includegraphics[width=.8\columnwidth]{figures/spp-pattern}
-            \captionof{figure}{Protection pattern and frequency illustration.}            
-        \end{center}
-
+        \begin{minipage}[t]{\columnwidth}
+            \centering
+            \includegraphics[width=.75\columnwidth]{figures/overview}
+            \vspace*{-3.2mm}
+            \captionof{figure}{Architecture of LeanGuard.} 
+            \label{fig:leanguard-overview}      
+        \end{minipage}
+        
     \end{multicols}
+    \vspace*{-2mm}
+    \begin{minipage}[t]{\columnwidth}
+        \centering
+        \includegraphics[width=.75\columnwidth]{figures/wss2}
+        \vspace*{-4mm}
+        \captionof{figure}{Memory consumption of each allocator configuration for PARSEC applications while varying the protection frequency.} 
+        \label{fig:mem-eval}      
+    \end{minipage}
 }
 
 
@@ -208,11 +219,13 @@ linewidth=2pt % Width of the border lines around content boxes
 \headerbox{Contact}{name=contact,column=3,aligned=references,above=bottom,boxColorOne=white}{ % This block is as tall as the references block
 
 \begin{description}\compresslist
-\item yves.kone@ens-lyon.fr
-\item 
-\item bitchebe@i3s.unice.fr
-\item 
-\item alain.tchana@ens-lyon.fr
+\small{
+    \item
+    \item bitchebe@i3s.unice.fr
+    \item 
+    \item alain.tchana@grenoble-inp.fr
+    \item 
+}
 \end{description}
 }
 
@@ -256,11 +269,15 @@ linewidth=2pt % Width of the border lines around content boxes
 
 \headerbox{3. Intel SPP: Sub-Page Write Permission}{name=results2,column=0,below=ctxmotiv,above=references, span=2}
 { % This block's bottom aligns with the bottom of the conclusion block
-    SPP~\cite{spp} is a recent Intel hardware virtualization feature that allows the hypervisor to write-protect guest’s memory at a sub-page (128B) granularity instead of 4KB.
-    \begin{center}
-        \includegraphics[width=.95\columnwidth]{figures/spp_walk}
-        \captionof{figure}{Overview of SPP functioning.}        
-    \end{center}    
+    SPP~\cite{spp} is a recent Intel hardware virtualization feature that allows the hypervisor to write-protect guest’s memory at a sub-page (128B) granularity instead of 4KB (see Figure~\ref{fig:spp-walk}). SPP builds on top of the Extended Page Table (EPT)~\cite{ept}, introduced long ago to facilitate memory virtualization. 
+
+    \begin{minipage}[t]{\linewidth}
+        \centering
+        \includegraphics[width=.75\columnwidth]{figures/spp_walk}
+        \vspace*{-2mm}
+        \captionof{figure}{Overview of SPP functioning.} 
+        \label{fig:spp-walk}      
+    \end{minipage}    
 }
 
 %----------------------------------------------------------------------------------------

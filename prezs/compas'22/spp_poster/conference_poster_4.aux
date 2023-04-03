@@ -9,12 +9,20 @@
 \bibcite{slimguard}{2}
 \bibcite{guarder}{3}
 \bibcite{spp}{4}
+\bibcite{ept}{5}
 \citation{spp}
+\citation{ept}
 \babel@aux{english}{}
 \pgfsyspdfmark {pgfid1}{1822154}{839114}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Memory waste of PARSEC when all application's buffers are allocated at the boundary of a guard page using Slimguard as the memory allocator.\relax }}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Memory waste and average security distances of PARSEC-\texttt  {blackscholes} when varying the protection frequency.\relax }}{2}}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Proportion of PARSEC-\texttt  {blackscholes}'s buffers placed at the boundary of a guard page for different values of the protection frequency. The allocator is Slimgard.\relax }}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Challenge $C_1$ illustration. GSP stands for guarg sub-page, $\DOTSB \sum@ \slimits@ GN$ memory consumed by guarnary, $\DOTSB \sum@ \slimits@ RGN$ and $\DOTSB \sum@ \slimits@ RGP$ internal fragmentation waste resp. of guarnary and guard page.\relax }}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Protection pattern and frequency illustration.\relax }}{2}}
-\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Overview of SPP functioning.\relax }}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Memory over-consumption that Slimguard would incur for PARSEC applications if all the allocated buffers are placed at the boundary of a guard page (worse case).\relax }}{2}}
+\newlabel{fig:waste-parsec-gp1}{{1}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Canary, Guard pages, and GuaNary illustration. For the two latter, buffers are aligned with the lower boundary of the (sub)page.\relax }}{2}}
+\newlabel{fig:cn-gp-gn}{{2}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Memory overhead and average security distances for PARSEC-\texttt  {blackscholes} when varying the protection frequency from 2 to 50. The intersection between the two curves gives the optimal frequency, i.e., the one providing the best memory overhead and security trade-off. The allocator is Slimguard.\relax }}{2}}
+\newlabel{fig:waste-parsec-gpn}{{3}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Architecture of LeanGuard.\relax }}{2}}
+\newlabel{fig:leanguard-overview}{{4}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Memory consumption of each allocator configuration for PARSEC applications while varying the protection frequency.\relax }}{2}}
+\newlabel{fig:mem-eval}{{5}{2}}
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Overview of SPP functioning.\relax }}{2}}
+\newlabel{fig:spp-walk}{{6}{2}}
